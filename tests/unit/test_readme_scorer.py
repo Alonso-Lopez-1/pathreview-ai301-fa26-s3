@@ -321,8 +321,7 @@ class TestReadmeScorer:
 
     def test_overall_score_calculation(self, scorer):
         """Test that overall score aggregates components."""
-        readme = (
-            """
+        readme = """
         # Good README
 
         ## Installation
@@ -337,9 +336,7 @@ class TestReadmeScorer:
         ![Build](https://example.com/build.svg)
 
         This readme has lots of content here.
-        """
-            * 3
-        )  # Make it comprehensive
+        """ * 3  # Make it comprehensive
 
         result = scorer.execute({"readme_content": readme})
 
